@@ -1,0 +1,34 @@
+/* ==========================================================
+   Variables de diseño: colores, radios y sombras.
+   Cambia aquí la paleta y se actualiza todo el sitio.
+   ========================================================== */
+:root {
+  /* Colores principales */
+  --deep: #1f3f44;      /* agua profunda */
+  --deep-2: #16302f;
+  --aqua: #3fa7a3;      /* aguamarina */
+  --aqua-soft: #d9efec;
+  --sand: #f6efe4;      /* arena */
+  --sand-2: #ece2d2;
+  --candle: #d9a441;    /* luz de vela */
+  --plum: #5b3a55;      /* cielo al anochecer */
+
+  /* Texto */
+  --ink: #22302f;
+  --muted: #5e6b69;
+  --white: #fffdf9;
+
+  /* WhatsApp */
+  --wa: #1fa855;
+  --wa-hover: #1a944a;
+
+  /* Tipografía */
+  --font-title: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Jost", system-ui, sans-serif;
+
+  /* Formas */
+  --radius: 18px;
+  --radius-sm: 14px;
+  --shadow: 0 10px 30px rgba(22, 48, 47, 0.12);
+  --header-height: 68px;
+}

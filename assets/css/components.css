@@ -1,0 +1,257 @@
+/* ==========================================================
+   Componentes reutilizables: botones, encabezado, menú,
+   calificación, estado abierto/cerrado y botón flotante.
+   ========================================================== */
+
+/* ---------- Botones ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.85rem 1.4rem;
+  border: 0;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn svg {
+  flex: none;
+  width: 20px;
+  height: 20px;
+}
+
+.btn-wa {
+  color: #fff;
+  background: var(--wa);
+  box-shadow: 0 6px 18px rgba(31, 168, 85, 0.3);
+}
+
+.btn-wa:hover {
+  background: var(--wa-hover);
+}
+
+.btn-ghost {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+.btn-line {
+  color: var(--deep);
+  background: transparent;
+  border: 1.5px solid var(--deep);
+}
+
+.btn-line--light {
+  color: #fff;
+  border-color: #fff;
+}
+
+/* ---------- Encabezado ---------- */
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 20;
+  transition: background 0.25s, box-shadow 0.25s;
+}
+
+.site-header.solid {
+  background: rgba(246, 239, 228, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.06);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+}
+
+.logo {
+  font-family: var(--font-title);
+  font-size: 1.55rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo span {
+  font-style: italic;
+  color: var(--candle);
+}
+
+.site-header.solid .logo {
+  color: var(--deep);
+}
+
+/* ---------- Menú ---------- */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.menu a {
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.site-header.solid .menu a {
+  color: var(--ink);
+}
+
+.menu .btn {
+  padding: 0.55rem 1.1rem;
+  font-size: 0.92rem;
+  color: #fff !important;
+  opacity: 1;
+}
+
+.burger {
+  display: none;
+  padding: 8px;
+  border: 0;
+  color: #fff;
+  background: none;
+  cursor: pointer;
+}
+
+.site-header.solid .burger {
+  color: var(--deep);
+}
+
+@media (max-width: 820px) {
+  .burger {
+    display: block;
+  }
+
+  .menu {
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 16px 18px;
+    background: var(--sand);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .menu a {
+    width: 100%;
+    padding: 12px 4px;
+    color: var(--ink);
+    border-bottom: 1px solid var(--sand-2);
+  }
+
+  .menu .btn {
+    justify-content: center;
+    margin-top: 12px;
+    border: 0;
+  }
+}
+
+/* ---------- Calificación (estrellas) ---------- */
+.stars {
+  letter-spacing: 0.05em;
+  color: var(--candle);
+}
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.1rem;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.92rem;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+}
+
+/* ---------- Estado abierto / cerrado ---------- */
+.status {
+  display: block;
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.status b {
+  font-weight: 600;
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 6px;
+  vertical-align: middle;
+  border-radius: 50%;
+  background: #9aa;
+}
+
+.dot.on {
+  background: #53d37f;
+  box-shadow: 0 0 0 4px rgba(83, 211, 127, 0.25);
+}
+
+/* ---------- Etiqueta destacada ---------- */
+.badge {
+  position: absolute;
+  top: -12px;
+  left: 24px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--deep-2);
+  background: var(--candle);
+  border-radius: 999px;
+}
+
+/* ---------- Botón flotante de WhatsApp ---------- */
+.float-wa {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 30;
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--wa);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s;
+}
+
+.float-wa:hover {
+  transform: scale(1.07);
+}
+
+.float-wa svg {
+  width: 32px;
+  height: 32px;
+  color: #fff;
+}
