@@ -125,6 +125,15 @@
   justify-content: center;
 }
 
+/* Aviso legal debajo de los planes (bebidas alcohólicas) */
+.legal-note {
+  max-width: 70ch;
+  margin: 28px 0 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
 /* Plan destacado (fondo oscuro) */
 .plan.star {
   color: #fff;
