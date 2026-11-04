@@ -42,6 +42,14 @@ Abre `index.html` en el navegador con doble clic. También puedes usar la extens
 | Los colores                | `assets/css/variables.css`                                            |
 | Una foto                   | Guárdala en `assets/img/` y cambia la ruta en `index.html`            |
 
+### Después de cambiar un CSS o JS
+
+Los navegadores guardan en caché los archivos de estilos y scripts. Para que todos vean la versión nueva, en `index.html` cambia el número `?v=` de los `<link>` y `<script>` (por ejemplo, a la fecha del cambio):
+
+```html
+<link rel="stylesheet" href="assets/css/sections.css?v=20261103">
+```
+
 ### Botones de WhatsApp
 
 Cualquier elemento con el atributo `data-wa` se convierte en un enlace de WhatsApp. El texto del atributo es el mensaje que llega escrito:
