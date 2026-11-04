@@ -37,6 +37,7 @@ Abre `index.html` en el navegador con doble clic. También puedes usar la extens
 | -------------------------- | --------------------------------------------------------------------- |
 | Un precio o un servicio    | `index.html`, secciones **Planes** y **Servicios**. Actualiza también el texto de `data-wa` del botón, que es el mensaje que llega a WhatsApp. |
 | El número de WhatsApp      | `assets/js/config.js` → `whatsapp`, y el teléfono visible en `index.html` (sección Visítanos y pie de página) |
+| El Instagram              | `index.html`: busca `instagram.com/bodyaquaspa` (aparece en Fechas especiales, Visítanos, pie de página y en el bloque `application/ld+json`) |
 | El horario                 | `assets/js/config.js` → `horario`, y la tabla de horario en `index.html` |
 | Los colores                | `assets/css/variables.css`                                            |
 | Una foto                   | Guárdala en `assets/img/` y cambia la ruta en `index.html`            |
