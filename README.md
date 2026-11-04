@@ -20,6 +20,7 @@ bodyaquaspa.github.io/
 │   ├── js/
 │   │   ├── config.js       # Número de WhatsApp y horario del negocio
 │   │   └── main.js         # Enlaces de WhatsApp, menú, estado abierto/cerrado, animaciones
+│   ├── icons/              # Ícono de la pestaña (favicon), del celular y manifest
 │   └── img/                # Fotos en WebP (+ jacuzzi-noche.jpg para la vista previa al compartir)
 └── README.md
 ```
